@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #182C46; */
+}
+.avatarWrapper{
+    width: 30%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+.main img{
+    width: 100%;
+}
+.text-bubble {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .text-bubble::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 10px 10px 0 0;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+  }
+.wrapper{
+    height: 80vh;
+    width: 80%;
+    margin: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* From https://css.glass */
+    background: rgba(255, 201, 82, 0.87);
+    border-radius: 16px;
+    box-shadow: #3c6397 0px 5px 15px;
+    backdrop-filter: blur(2.1px);
+    -webkit-backdrop-filter: blur(2.1px);
+    border: 1px solid rgba(255, 201, 82, 0.27);
+    
+}
+.wrapper .loginText{
+    width: 40%;
+}
+.wrapper .loginText p{
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color:black;
+    letter-spacing: 1.5px;
+}
+.wrapper .loginText ul li{
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    color:black;
+    letter-spacing: 1.5px;
+    list-style: none;
+}
+.wrapper .loginText h1{
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    color: #3c6397;
+}
+.wrapper .loginText h3{
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    color: white;
+}
+#login{
+    background-image: url('./assets/images/wallet.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    filter: drop-shadow(rgb(48, 47, 47) 1rem 1rem 10px);
+    z-index: 99;
+}
+#login label{
+    color:white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+#login input{
+    background-color: transparent;
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(2.1px);
+    color:white;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px;
+}
+#login button{
+    margin-top: 10px;
+    width: 50%;
+    align-self: center;
+    border-radius: 5px;
+    border: 0;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    height: 30px;
+    background-color: transparent;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    color: white;
+}
+#login button:hover{
+    color: rgba(255, 201, 82, 0.87);
+}
+
+.wallet{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.wallet h1{
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    color: white;
+    font-size: 3rem;
+}
+.wallet .walletAction{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+.wallet .walletAction button{
+    padding: 5px;
+    margin: 5px;
+    width: 30%;
+    height: 50px;
+    border: 0;
+    border-radius: 10px;
+}
+.wallet #transaction{
+    display:none;
+    margin: 30px;
+    width: 70%;
+    padding: 10px;
+    background-color: white;
+    backdrop-filter: blur(2.1px);
+    -webkit-backdrop-filter: blur(2.1px);
+    color:#3c6397;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+#welcomeAvatar{
+    font-weight: 700;
+}
+#warning{
+    display: none;
+    color:red;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+#register{
+    /* text-decoration: none; */
+    color:white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+#register:hover{
+    color:rgba(255, 201, 82, 0.87);
+}
+.loginBtns{
+    display: flex;
+
+}
+@media screen and (min-width:319px) and (max-width:767px){
+    .main{
+        flex-direction: column;
+        margin-top:210px
+    }
+    .avatarWrapper{
+        width: 60%;
+    }
+    .wrapper{
+        flex-direction: column-reverse;
+        width: 90%;
+        height: 170vh;
+    }
+    #login{
+        width: 100%;
+    }
+    .wrapper .loginText{
+        width: 100%;
+        text-align: center;
+    }
+}
+@media screen and (min-width:768px) and (max-width:990px){
+    .avatarWrapper{
+        width: 60%;
+    }
+    .wrapper{
+        flex-direction: column-reverse;
+        width: 90%;
+        height: 100vh;
+    }
+    #login{
+        width: 100%;
+    }
+    .wrapper .loginText{
+        width: 100%;
+        text-align: center;
+    }
+    .wallet{
+        overflow: scroll;
+    }
+}
